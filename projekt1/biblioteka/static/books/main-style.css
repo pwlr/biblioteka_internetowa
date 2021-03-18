@@ -1,0 +1,17 @@
+body {
+    font-family: Arial;
+}
+nav a {
+    color: crimson;
+    text-decoration: None;
+}
+.book-pattern {
+    background-color: gray;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    width: 50%;
+    border: 1px solid lightgray;
+    float: left;
+    padding: 5px;
+}

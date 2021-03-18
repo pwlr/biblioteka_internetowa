@@ -1,0 +1,30 @@
+{% extends "biblioteka/main.html" %}
+
+{% block content %}
+
+<form action="/userAuth/" method="POST">
+
+    {% csrf_token %}
+
+    <div style="padding: 10px 30% 10px">
+        <h3>Logowanie</h3>
+        <input type="text" id="defaultLoginFormEmail" placeholder="Login" name="username" class="form-control">
+
+
+        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Hasło" name="password">
+            <div>
+                <input class="form-check-input" type="checkbox" id="defaultLoginFormRemember">
+
+                <label class="form-check-label" for="defaultLoginFormRemember">Zapamiętaj mnie</label>
+            </div>
+
+
+    <br>
+    <button type="submit" class="btn btn-primary">Zaloguj się</button>
+            </div>
+
+
+</form>
+
+
+{% endblock %}}

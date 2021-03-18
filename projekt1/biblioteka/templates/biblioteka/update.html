@@ -1,0 +1,19 @@
+{% extends "biblioteka/panel.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+<div style="width: 30%">
+<h2 style="padding: 20px">Edytuj książkę:</h2>
+<form action="/{{current_book.pk}}/update/" method="POST" enctype="multipart/form-data" style="margin-left: 50px">
+    {% csrf_token %}
+    {{ BookForm|crispy }}
+    <br>
+    <button type="submit" class="btn btn-primary">Zapisz</button>
+    <button class="btn btn-secondary">
+        <a href="{% url 'panel' %}" style="color: white; text-decoration: none">Wróć</a>
+    </button>
+</form>
+</div>
+
+{% endblock %}

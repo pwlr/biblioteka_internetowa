@@ -1,0 +1,25 @@
+{% extends "biblioteka/panel.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div style="width: 30%">
+    <h2 style="padding: 20px">Dodaj nową książkę:</h2>
+
+
+    <form action="/panel/upload/" method='POST' enctype="multipart/form-data" style="margin-left: 50px">
+
+
+        {% csrf_token %}
+
+
+
+
+        {{ newBookForm|crispy }}
+        <br>
+        <button type="submit" class="btn btn-primary">Dodaj książkę</button>
+        <button class="btn btn-secondary">
+            <a href="{% url 'panel' %}" style="color: white; text-decoration: none">Wróć</a>
+        </button>
+    </form>
+</div>
+{% endblock %}
